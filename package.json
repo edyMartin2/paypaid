@@ -1,0 +1,21 @@
+{
+  "name": "visa_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./bin/www --inspect",
+    "db:make_schema" : "node ./prisma/build_model/index.js",
+    "db:update":"node ./prisma/build_model/index.js && yarn prisma db push"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "3.5.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15",
+    "prisma": "3.5.0"
+  }
+}
